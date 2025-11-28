@@ -1,0 +1,113 @@
+/* Container */
+.container {
+  max-width: 800px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Request Card */
+.request-card {
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* Titles */
+.request-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Status */
+.request-status {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  opacity: 0;
+  animation: fadeInBadge 0.6s ease forwards;
+}
+
+@keyframes fadeInBadge {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.status-badge.pending { background: #f59e0b; }
+.status-badge.approved { background: #10b981; }
+.status-badge.rejected { background: #ef4444; }
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.approve-btn, .reject-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.approve-btn {
+  background: #10b981;
+  color: #fff;
+}
+
+.reject-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.approve-btn:hover,
+.reject-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Button click animation */
+.approve-btn:active,
+.reject-btn:active {
+  transform: scale(0.95);
+}

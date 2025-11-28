@@ -1,0 +1,59 @@
+<div class="requests-wrapper">
+
+  <!-- Back To Dashboard Button -->
+  <div class="back-action">
+    <button class="btn btn-outline-primary" routerLink="/user-dashboard">
+      ← Back to Dashboard
+    </button>
+  </div>
+
+  
+  <div class="container animated-container">
+    <h3 class="page-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/8146/8146003.png"
+           class="title-icon" />
+      My Requests
+    </h3>
+
+    <!-- Table -->
+    <table class="table table-striped mt-3" *ngIf="requests.length">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Request Type</th>
+          <th>Status</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let r of requests" class="row-animate">
+          <td>{{ r.id }}</td>
+
+          <td>
+            <div class="request-type">
+              <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png"
+                   class="type-icon" />
+              {{ r.requestType }}
+            </div>
+          </td>
+
+          <td>
+            <span class="badge bg-warning" *ngIf="r.status==='PENDING'">PENDING</span>
+            <span class="badge bg-success" *ngIf="r.status==='APPROVED'">APPROVED</span>
+            <span class="badge bg-danger" *ngIf="r.status==='REJECTED'">REJECTED</span>
+          </td>
+
+          <td>{{ r.createdAt ? (r.createdAt | date:'short') : '-' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Empty State -->
+    <div class="empty" *ngIf="!requests.length">
+      <img src="https://cdn-icons-png.flaticon.com/512/4076/4076679.png" class="empty-img" />
+      <p>You have no requests yet.</p>
+    </div>
+
+  </div>
+</div>

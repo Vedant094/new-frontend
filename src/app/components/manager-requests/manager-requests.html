@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h3>All Requests</h3>
+
+  <div *ngFor="let r of requests" class="request-card mb-3 p-3">
+
+    <div class="d-flex justify-content-between align-items-start">
+
+      <div>
+        <h5 class="request-title">
+          {{ r.requestType || r.title || 'Request' }}
+        </h5>
+
+        <p class="request-status">
+          Status:
+          <span class="status-badge"
+                [ngClass]="r.status?.toLowerCase()">
+            {{ r.status }}
+          </span>
+        </p>
+      </div>
+
+      <!-- SHOW BUTTONS ONLY IF STATUS IS PENDING -->
+      <div class="action-buttons" *ngIf="r.status === 'PENDING'">
+        <button class="btn approve-btn" (click)="approve(r.id)">Approve</button>
+        <button class="btn reject-btn" (click)="reject(r.id)">Reject</button>
+      </div>
+
+    </div>
+  </div>
+</div>

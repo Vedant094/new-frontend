@@ -1,0 +1,59 @@
+<!-- src/app/components/user-dashboard/user-dashboard.html -->
+<div class="dashboard-wrapper" *ngIf="!loading">
+
+  <!-- Welcome Section -->
+  <div class="header-card fade-in">
+
+    <img 
+      src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"
+      alt="User Icon"
+      class="user-illustration"
+    />
+
+    <h2 class="welcome-title">
+      Welcome, {{ user.firstName || user.email }}
+    </h2>
+    <p class="welcome-sub">Your personalized TaskM dashboard</p>
+  </div>
+
+  <!-- Details Card -->
+  <div class="info-card slide-up">
+    <h4>User Information</h4>
+
+    <div class="info-row">
+      <i class="bi bi-envelope"></i>
+      <span>Email:</span>
+      <strong>{{ user.email }}</strong>
+    </div>
+
+    <div class="info-row">
+      <i class="bi bi-person-badge"></i>
+      <span>User ID:</span>
+      <strong>{{ user.id }}</strong>
+    </div>
+
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="action-container fade-up">
+    <button class="btn action-btn primary" routerLink="/submit-request">
+      <i class="bi bi-plus-circle"></i> Submit New Request
+    </button>
+
+    <button class="btn action-btn success" routerLink="/my-requests">
+      <i class="bi bi-list-task"></i> View My Requests
+    </button>
+  </div>
+
+  <!-- Logout -->
+  <div class="logout-container fade-up">
+    <button class="btn logout-btn" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </button>
+  </div>
+
+</div>
+
+<div *ngIf="loading">
+  <h4 class="text-center mt-4">Loading...</h4>
+</div>

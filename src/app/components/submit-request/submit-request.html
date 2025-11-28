@@ -1,0 +1,35 @@
+<!-- src/app/components/submit-request/submit-request.html -->
+<div class="submit-wrapper">
+
+  <div class="submit-card">
+
+    <!-- Illustration -->
+    <div class="illustration">
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/7305/7305863.png"
+        class="submit-img"
+        alt="Request Illustration"
+      />
+    </div>
+
+    <h3 class="title text-center">Submit a New Request</h3>
+    <p class="subtitle text-center">Fill in the details below</p>
+
+    <!-- Input with icon -->
+    <div class="input-group mt-3">
+      <i class="bi bi-pencil-square"></i>
+      <input class="form-control" placeholder="Request Type" [(ngModel)]="requestType" />
+    </div>
+
+    <!-- Alerts -->
+    <div *ngIf="error" class="alert alert-danger mt-3">{{ error }}</div>
+    <div *ngIf="success" class="alert alert-success mt-3">{{ success }}</div>
+
+    <!-- Button -->
+    <button class="btn btn-primary w-100 mt-3" (click)="submit()">
+      Submit Request
+    </button>
+
+  </div>
+
+</div>

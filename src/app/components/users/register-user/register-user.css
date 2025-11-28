@@ -1,0 +1,76 @@
+/* Full-page wrapper */
+.register-wrapper {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #eef2ff, #f0f9ff, #e0f7fa);
+  padding: 30px;
+}
+
+.register-card{
+  box-sizing: border-box;
+}
+
+/* Card with animation */
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0px 12px 40px rgba(0,0,0,0.08);
+  animation: fadeUp 0.8s ease;
+}
+
+/* Entrance animation */
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Illustration */
+.illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.register-img {
+  width: 130px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Subtitle */
+.subtitle {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Icon styling in password field */
+.input-group i {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 12px;
+  color: #6c757d;
+}
+
+.input-group input {
+  padding-left: 35px !important;
+}
+
+.input-group{
+  position: relative;
+}
+
+/* Hover on register button */
+.btn-primary:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}

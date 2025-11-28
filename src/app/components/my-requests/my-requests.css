@@ -1,0 +1,128 @@
+/* Background Wrapper */
+.requests-wrapper {
+  background: linear-gradient(120deg, #eef2ff, #f8fbff, #e8faff);
+  min-height: 100vh;
+  padding: 25px;
+}
+
+/* Card-like container */
+.animated-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.8s ease;
+  position: relative;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Title */
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2b2d42;
+}
+
+.title-icon {
+  width: 32px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* Fun bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Table */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafbff;
+}
+
+/* Animated row hover */
+.table tbody tr:hover {
+  background: #eef5ff;
+  transform: scale(1.01);
+  transition: 0.25s ease;
+}
+
+/* Each row appears with animation */
+.row-animate {
+  animation: fade-in 0.5s ease both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Request Type with icon */
+.request-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.type-icon {
+  width: 24px;
+  opacity: 0.8;
+}
+
+/* Empty State */
+.empty {
+  text-align: center;
+  padding: 30px 0;
+  animation: fadeUp 1s ease;
+}
+
+.empty-img {
+  width: 140px;
+  opacity: 0.85;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.empty p {
+  margin-top: 12px;
+  color: #555;
+  font-size: 1rem;
+  animation: fadeUp 1.2s ease;
+}
+
+/* Back Button */
+.back-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.back-action .btn-outline-primary {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.back-action .btn-outline-primary:hover {
+  transform: translateY(-2px);
+  background: #eef6ff;
+  border-color: #b6d4fe;
+}
+

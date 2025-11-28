@@ -1,0 +1,38 @@
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+
+    <!-- Illustration -->
+    <div class="illustration">
+      <img src="https://cdn-icons-png.flaticon.com/512/9523/9523226.png" 
+     class="login-img" alt="Login 3D Illustration">
+
+    </div>
+
+    <h3 class="text-center mb-3">Welcome Back</h3>
+    <p class="subtitle">Login to access your dashboard</p>
+
+    <!-- Input fields -->
+    <div class="input-group">
+      <i class="bi bi-envelope"></i>
+      <input class="form-control" placeholder="Email" [(ngModel)]="email" />
+    </div>
+
+    <div class="input-group mt-3">
+      <i class="bi bi-lock"></i>
+      <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" />
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+    <!-- Button -->
+    <button class="btn login-btn w-100 mt-3"
+            (click)="submit()"
+            [disabled]="loading">
+      {{ loading ? 'Logging in...' : 'Login' }}
+    </button>
+  </div>
+
+</div>

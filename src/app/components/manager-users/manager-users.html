@@ -1,0 +1,33 @@
+<div class="users-wrapper">
+
+  <div class="container mt-4 fade-in">
+
+    <h3>Users Under You</h3>
+
+    <!-- Users Table -->
+    <div class="table-card">
+      <table class="table table-hover mt-3" *ngIf="users.length">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let u of users" class="row-anim">
+            <td>{{ u.id }}</td>
+            <td>{{ u.firstName }} {{ u.lastName }}</td>
+            <td>{{ u.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Empty State -->
+      <div class="empty-state" *ngIf="!users.length && !loading">
+        <p>No users assigned to you yet.</p>
+      </div>
+    </div>
+  </div>
+</div>

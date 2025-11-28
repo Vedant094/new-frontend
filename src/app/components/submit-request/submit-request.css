@@ -1,0 +1,102 @@
+/* Full-page wrapper */
+.submit-wrapper {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #eef2ff, #f0f9ff, #e0f7fa);
+  padding: 30px;
+}
+
+/* Card styling with animation */
+.submit-card {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0px 12px 40px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Illustration */
+.illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.submit-img {
+  width: 120px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Card animation */
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Title & subtitle */
+.title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6c757d;
+  margin-bottom: 18px;
+}
+
+/* Input group with icon */
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  padding-left: 40px !important;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Submit button animation */
+.btn-primary {
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background-color: #005ed1;
+}
+
+

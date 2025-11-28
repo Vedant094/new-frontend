@@ -1,0 +1,36 @@
+<div class="register-wrapper">
+<div class="register-card">
+
+    <!-- Illustration -->
+    <div class="illustration">
+      <img src="https://cdn-icons-png.flaticon.com/512/7014/7014037.png"
+           alt="User Registration Illustration"
+           class="register-img" />
+    </div>
+
+    <h3 class="text-center mb-2">Create Your Account</h3>
+    <p class="subtitle text-center">Fill the details to register as a user</p>
+
+    <!-- Input Fields -->
+    <input class="form-control my-2" placeholder="First Name" [(ngModel)]="firstName" />
+
+    <input class="form-control my-2" placeholder="Last Name" [(ngModel)]="lastName" />
+
+    <input class="form-control my-2" placeholder="Email" [(ngModel)]="email" />
+
+    
+      <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" />
+
+
+    <input class="form-control my-2" placeholder="Manager ID" [(ngModel)]="managerId" />
+
+    <!-- Error -->
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-primary w-100 mt-2" (click)="submit()">
+      Register
+    </button>
+
+  </div>
+  </div>
